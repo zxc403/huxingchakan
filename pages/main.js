@@ -35,6 +35,53 @@ async function createRenderer(canvas) {
   return { renderer, webgpu: false, backend: 'WebGL2', supportsASTC: !!renderer.getContext().getExtension('WEBGL_compressed_texture_astc') }
 }
 
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+
+// GitHub Pages can throttle a single large request. Range requests let the browser use
+// several connections while preserving one ordinary GLB download on hosts without Range.
+async function loadGltfParallel(gltf, url, onProgress = () => {}) {
+  const isLocalHost = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)
+  if (isLocalHost) return gltf.loadAsync(url, (event) => onProgress(event.loaded, event.total || event.loaded))
+  const probe = await fetch(url, { method: 'HEAD' }).catch(() => null)
+  const size = Number(probe?.headers.get('content-length') || 0)
+  const hasRange = (probe?.headers.get('accept-ranges') || '').toLowerCase().includes('bytes')
+  if (!probe?.ok || !size || !hasRange) return gltf.loadAsync(url)
+
+  const partSize = 1024 * 1024
+  const ranges = Array.from({ length: Math.ceil(size / partSize) }, (_, index) => {
+    const start = index * partSize
+    return { index, start, end: Math.min(start + partSize, size) - 1 }
+  })
+  const parts = new Array(ranges.length)
+  let next = 0, received = 0
+  async function worker() {
+    while (next < ranges.length) {
+      const range = ranges[next++]
+      let lastError = null
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          const response = await fetch(url, { headers: { Range: `bytes=${range.start}-${range.end}` } })
+          if (!response.ok || response.status !== 206) throw new Error(`Range request failed: HTTP ${response.status}`)
+          parts[range.index] = await response.arrayBuffer()
+          received += parts[range.index].byteLength
+          onProgress(received, size)
+          lastError = null
+          break
+        } catch (error) {
+          lastError = error
+          if (attempt < 2) await delay(300 * (attempt + 1))
+        }
+      }
+      if (lastError) throw lastError
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(8, ranges.length) }, worker))
+  const output = new Uint8Array(parts.reduce((sum, part) => sum + part.byteLength, 0))
+  let offset = 0
+  for (const part of parts) { output.set(new Uint8Array(part), offset); offset += part.byteLength }
+  return new Promise((resolve, reject) => gltf.parse(output.buffer, '', resolve, reject))
+}
+
 async function main() {
   const { renderer, webgpu, backend, supportsASTC } = await createRenderer(document.getElementById('scene'))
   const dprLimit = Math.min(window.devicePixelRatio || 1, 2)
@@ -53,12 +100,24 @@ async function main() {
   const draco = new DRACOLoader().setDecoderPath(assetUrl(BASE, 'draco/')).setWorkerLimit(2)
   const ktx2 = new KTX2Loader().setTranscoderPath(assetUrl(BASE, 'basis/')).setWorkerLimit(2).detectSupport(renderer)
   gltf.setDRACOLoader(draco).setKTX2Loader(ktx2)
-  const modelFile = supportsASTC ? 'models/model-astc.glb' : 'models/model.glb'
-  const building = await loadBuilding(async (url) => {
-    const result = await gltf.loadAsync(url)
+  const fullModelFile = supportsASTC ? 'models/model-astc.glb' : 'models/model.glb'
+  const previewModelFile = 'models/model-preview.glb'
+  const assetNames = {
+    [previewModelFile]: '快速预览模型',
+    [fullModelFile]: '高清建筑模型',
+    'models/collision.glb': '碰撞体',
+    'models/character.glb': '漫游人物',
+  }
+  const loadModelAsset = async (url) => {
+    const file = decodeURIComponent(url.split('/').pop())
+    const label = assetNames[file] || '场景资源'
+    const result = await loadGltfParallel(gltf, url, (loaded, total) => {
+      const percent = Math.min(100, Math.round(loaded / total * 100))
+      status.textContent = `正在下载${label} ${(loaded / 1048576).toFixed(1)} / ${(total / 1048576).toFixed(1)} MB（${percent}%）`
+    })
     return { object: result.scene, animations: result.animations }
-  }, BASE, { modelFile })
-  draco.dispose(); ktx2.dispose()
+  }
+  const building = await loadBuilding(loadModelAsset, BASE, { modelFile: previewModelFile })
   scene.add(building.model)
   const lighting = addBuildingLights(scene)
   const outdoor = await createPageEnvironment(scene, renderer, { base: BASE, webgpu })
@@ -100,7 +159,35 @@ async function main() {
   status.textContent = '正在编译材质、阴影和后期…'
   await renderer.compileAsync(scene, camera)
   let last = performance.now(), time = 0, raf = 0, frames = 0, statTime = 0, fps = 0
-  const renderInfo = { backend, calls: 0, triangles: 0, fps: 0, dpr, modelFile, textureMode: supportsASTC ? 'ASTC 4x4' : 'portable' }
+  const renderInfo = { backend, calls: 0, triangles: 0, fps: 0, dpr, modelFile: previewModelFile, textureMode: 'fast preview' }
+  const assetStatus = document.getElementById('asset-status')
+  const setAssetStatus = (text) => {
+    if (!assetStatus) return
+    assetStatus.hidden = !text
+    assetStatus.textContent = text
+  }
+  async function upgradeToFullModel() {
+    try {
+      const fullUrl = assetUrl(BASE, fullModelFile)
+      const result = await loadGltfParallel(gltf, fullUrl, (loaded, total) => {
+        const percent = Math.min(100, Math.round(loaded / total * 100))
+        setAssetStatus(`高清材质后台下载中 ${(loaded / 1048576).toFixed(1)} / ${(total / 1048576).toFixed(1)} MB（${percent}%）`)
+      })
+      building.replaceModel(result.scene)
+      renderInfo.modelFile = fullModelFile
+      renderInfo.textureMode = supportsASTC ? 'ASTC 4x4' : 'portable'
+      document.getElementById('backend-label').textContent = `${backend} · ${supportsASTC ? 'ASTC 4×4' : '标准纹理'} · DPR ${dpr.toFixed(2)}`
+      setAssetStatus('高清材质已启用')
+      await renderer.compileAsync(scene, camera)
+      setTimeout(() => setAssetStatus(''), 1200)
+    } catch (error) {
+      console.warn('高清模型后台升级失败，继续使用快速预览模型', error)
+      setAssetStatus('高清材质暂时下载失败，当前使用快速预览模式')
+      setTimeout(() => setAssetStatus(''), 3200)
+    } finally {
+      draco.dispose(); ktx2.dispose()
+    }
+  }
   function frame(now) {
     raf = requestAnimationFrame(frame)
     const rawDt = Math.max((now - last) / 1000, 0.001)
@@ -122,6 +209,7 @@ async function main() {
   }
   loading.style.opacity = '0'
   setTimeout(() => loading.remove(), 450)
+  setTimeout(() => upgradeToFullModel(), 600)
   window.addEventListener('pagehide', () => {
     cancelAnimationFrame(raf); abort.abort(); game.dispose(); outdoor.dispose(); composer?.dispose(); pipeline?.dispose(); renderer.dispose()
   }, { once: true })
@@ -130,6 +218,6 @@ async function main() {
 main().catch((error) => {
   console.error(error)
   status.textContent = '场景启动失败'
-  const detail = document.createElement('small'); detail.textContent = `${error.message}。请使用支持 WebGL2 的浏览器，并确认本地模型和解码器完整。`
+  const detail = document.createElement('small'); detail.textContent = `${error.message}。请使用支持 WebGL2 的浏览器，并确认在线模型和解码器完整。`
   loading.append(detail)
 })

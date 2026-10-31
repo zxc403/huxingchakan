@@ -24,6 +24,7 @@
 | 独立漫游入口模板 | `pages/index.template` |
 | 标准建筑 GLB | `public/models/model.glb` |
 | ASTC 4×4 建筑 GLB | `public/models/model-astc.glb` |
+| 在线首屏快速预览 GLB | `public/models/model-preview.glb` |
 | 低模碰撞体 | `public/models/collision.glb` |
 | 22 骨人物与四个动作 | `public/models/character.glb` |
 | 纹理来源清单 | `docs/texture-manifest.json` |
@@ -77,6 +78,8 @@ npm start
 - `model-astc.glb`：22,416,308 字节，真正的 ASTC 4×4 与 mipmaps；SHA-256 为 `5aaa3ec970b0dfd62165329c71e13122edf4ff273480c2ebfcead1b276dcf17b`。
 
 独立漫游只在 WebGPU adapter 或 WebGL 扩展确实支持 ASTC 时加载 ASTC 版本，否则回退标准版。本机 Edge 已实际回退标准版并加载全部 27 张纹理。主墙等运行颜色纹理为 1K，法线／ARM 为 512，卷草花拼花为 1600 × 1800；详见 `docs/texture-optimization.json`。
+
+GitHub Pages 大文件单连接吞吐不稳定，因此独立漫游会先加载 `model-preview.glb`（3,662,768 字节，颜色最多 256、法线／ARM 128、拼花 384；SHA-256 为 `c35f8b2ea3b31e89cb8b0e9085a651e3bd4788a2bde9ba18c97cdc0f951c33c5`）进入场景，再并行分段下载完整 ASTC／标准模型并原位升级。详细尺寸记录见 `docs/preview-model.json`。
 
 ## 验收状态
 

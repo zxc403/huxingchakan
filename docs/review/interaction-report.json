@@ -9,38 +9,38 @@
       "details": [
         {
           "floor": 1,
-          "feet": -0.063,
-          "fps": 15,
+          "feet": -0.069,
+          "fps": 26,
           "calls": 111
         },
         {
           "floor": 2,
           "feet": 3.6,
-          "fps": 29,
+          "fps": 26,
           "calls": 127
         },
         {
           "floor": 3,
           "feet": 6.6,
-          "fps": 21,
+          "fps": 19,
           "calls": 129
         },
         {
           "floor": 4,
           "feet": 9.6,
-          "fps": 16,
+          "fps": 17,
           "calls": 129
         },
         {
           "floor": 5,
           "feet": 12.6,
-          "fps": 20,
+          "fps": 18,
           "calls": 206
         },
         {
           "floor": 6,
           "feet": 15.6,
-          "fps": 20,
+          "fps": 17,
           "calls": 234
         }
       ]
@@ -66,7 +66,7 @@
           "yaw": 0,
           "pitch": 0.25,
           "animation": "idle",
-          "fps": 19,
+          "fps": 29,
           "started": true,
           "triangles": 346025,
           "visibleFloors": [
@@ -85,19 +85,19 @@
           "position": [
             3,
             0,
-            7.831
+            7.917
           ],
           "camera": [
             3,
             2.091,
-            11.22
+            11.313
           ],
           "grounded": true,
           "view": "third",
           "yaw": 0,
           "pitch": 0.25,
           "animation": "walk",
-          "fps": 31,
+          "fps": 29,
           "started": true,
           "triangles": 345849,
           "visibleFloors": [
@@ -116,19 +116,19 @@
           "position": [
             3,
             0,
-            6.234
+            6.318
           ],
           "camera": [
             3,
             2.091,
-            9.537
+            9.618
           ],
           "grounded": true,
           "view": "third",
           "yaw": 0,
           "pitch": 0.25,
           "animation": "idle",
-          "fps": 34,
+          "fps": 31,
           "started": true,
           "triangles": 345473,
           "visibleFloors": [
@@ -151,19 +151,19 @@
         "position": [
           3,
           0,
-          3.147
+          3.482
         ],
         "camera": [
           3,
           2.091,
-          6.649
+          6.992
         ],
         "grounded": true,
         "view": "third",
         "yaw": 0,
         "pitch": 0.25,
         "animation": "run",
-        "fps": 34,
+        "fps": 30,
         "started": true,
         "triangles": 320697,
         "visibleFloors": [
@@ -182,23 +182,23 @@
       "details": {
         "duringJump": {
           "floor": 1,
-          "feet": 0.791,
+          "feet": 0.814,
           "position": [
             3,
-            0.791,
-            2.641
+            0.814,
+            2.978
           ],
           "camera": [
             3,
-            2.807,
-            5.937
+            2.866,
+            6.272
           ],
           "grounded": false,
           "view": "third",
           "yaw": 0,
           "pitch": 0.25,
           "animation": "jump",
-          "fps": 33,
+          "fps": 30,
           "started": true,
           "triangles": 320697,
           "visibleFloors": [
@@ -217,12 +217,12 @@
           "position": [
             3,
             0,
-            2.638
+            2.975
           ],
           "camera": [
             3,
             2.091,
-            5.932
+            6.27
           ],
           "grounded": true,
           "view": "third",
@@ -271,7 +271,7 @@
         "yaw": 1.571,
         "pitch": 0.25,
         "animation": "idle",
-        "fps": 20,
+        "fps": 16,
         "started": true,
         "triangles": 449241,
         "visibleFloors": [
@@ -291,12 +291,12 @@
         "floor": 5,
         "feet": 12.6,
         "position": [
-          0.519,
+          0.342,
           12.6,
           -1.82
         ],
         "camera": [
-          -2.783,
+          -2.968,
           14.691,
           -1.82
         ],
@@ -305,14 +305,14 @@
         "yaw": -1.571,
         "pitch": 0.25,
         "animation": "idle",
-        "fps": 22,
+        "fps": 17,
         "started": true,
-        "triangles": 446629,
+        "triangles": 446737,
         "visibleFloors": [
           5
         ],
         "backend": "WebGPU",
-        "calls": 196,
+        "calls": 197,
         "dpr": 1,
         "modelFile": "models/model.glb",
         "textureMode": "portable",
@@ -324,23 +324,23 @@
       "details": {
         "mid": {
           "floor": 1,
-          "feet": 1.779,
+          "feet": 1.724,
           "position": [
             -1.096,
-            1.779,
-            -5.462
+            1.724,
+            -5.366
           ],
           "camera": [
             -1.096,
-            3.598,
-            -3.217
+            3.571,
+            -3.016
           ],
           "grounded": true,
           "view": "third",
           "yaw": 0,
           "pitch": 0.25,
           "animation": "idle",
-          "fps": 29,
+          "fps": 21,
           "started": true,
           "triangles": 278681,
           "visibleFloors": [
@@ -357,21 +357,21 @@
           "floor": 1,
           "feet": 1.8,
           "position": [
-            0.283,
+            0.356,
             1.8,
             -5.66
           ],
           "camera": [
-            0.273,
+            0.347,
             3.891,
-            -2.366
+            -2.365
           ],
           "grounded": true,
           "view": "third",
           "yaw": 0,
           "pitch": 0.25,
           "animation": "idle",
-          "fps": 28,
+          "fps": 23,
           "started": true,
           "triangles": 298681,
           "visibleFloors": [
@@ -391,23 +391,23 @@
       "details": {
         "mid": {
           "floor": 1,
-          "feet": 1.779,
+          "feet": 1.724,
           "position": [
             -1.096,
-            1.779,
-            -5.462
+            1.724,
+            -5.366
           ],
           "camera": [
             -1.096,
-            3.598,
-            -3.217
+            3.571,
+            -3.016
           ],
           "grounded": true,
           "view": "third",
           "yaw": 0,
           "pitch": 0.25,
           "animation": "idle",
-          "fps": 29,
+          "fps": 21,
           "started": true,
           "triangles": 278681,
           "visibleFloors": [
@@ -424,21 +424,21 @@
           "floor": 1,
           "feet": 1.8,
           "position": [
-            0.283,
+            0.356,
             1.8,
             -5.66
           ],
           "camera": [
-            0.273,
+            0.347,
             3.891,
-            -2.366
+            -2.365
           ],
           "grounded": true,
           "view": "third",
           "yaw": 0,
           "pitch": 0.25,
           "animation": "idle",
-          "fps": 28,
+          "fps": 23,
           "started": true,
           "triangles": 298681,
           "visibleFloors": [
@@ -455,12 +455,12 @@
           "floor": 1,
           "feet": 1.8,
           "position": [
-            0.29,
+            0.362,
             1.8,
             -5.66
           ],
           "camera": [
-            0.327,
+            0.399,
             3.402,
             -7.036
           ],
@@ -469,7 +469,7 @@
           "yaw": 3.115,
           "pitch": 0.25,
           "animation": "idle",
-          "fps": 31,
+          "fps": 25,
           "started": true,
           "triangles": 347121,
           "visibleFloors": [
@@ -486,12 +486,12 @@
           "floor": 2,
           "feet": 3.6,
           "position": [
-            0.167,
+            0.239,
             3.6,
             -2.703
           ],
           "camera": [
-            0.222,
+            0.294,
             5.375,
             -4.759
           ],
@@ -500,7 +500,7 @@
           "yaw": 3.115,
           "pitch": 0.25,
           "animation": "idle",
-          "fps": 28,
+          "fps": 24,
           "started": true,
           "triangles": 416261,
           "visibleFloors": [
@@ -531,12 +531,12 @@
       "text": "[vite] connecting..."
     },
     {
-      "type": "warning",
-      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
-    },
-    {
       "type": "debug",
       "text": "[vite] connected."
+    },
+    {
+      "type": "warning",
+      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
     },
     {
       "type": "warning",
@@ -548,7 +548,7 @@
   "badResponses": [],
   "capabilities": {
     "backend": "WebGPU",
-    "modelFile": "models/model.glb",
+    "modelFile": "models/model-preview.glb",
     "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
     "adapterInfo": {
       "vendor": "intel",
@@ -561,12 +561,12 @@
     "floor": 2,
     "feet": 3.6,
     "position": [
-      0.167,
+      0.239,
       3.6,
       -2.703
     ],
     "camera": [
-      0.222,
+      0.294,
       5.375,
       -4.759
     ],
@@ -575,7 +575,7 @@
     "yaw": 3.115,
     "pitch": 0.25,
     "animation": "idle",
-    "fps": 29,
+    "fps": 24,
     "started": true,
     "triangles": 416261,
     "visibleFloors": [

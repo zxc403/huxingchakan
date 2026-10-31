@@ -29,8 +29,8 @@
       "backend": "WebGL2",
       "calls": 1365,
       "dpr": 1,
-      "modelFile": "models/model.glb",
-      "textureMode": "portable",
+      "modelFile": "models/model-preview.glb",
+      "textureMode": "fast preview",
       "meshes": 331
     },
     "hourLabel": "18:30",
@@ -52,7 +52,7 @@
       "yaw": 0,
       "pitch": 0.25,
       "animation": "idle",
-      "fps": 19,
+      "fps": 15,
       "started": true,
       "triangles": 1674826,
       "visibleFloors": [
@@ -89,7 +89,7 @@
         "yaw": 0,
         "pitch": 0.25,
         "animation": "idle",
-        "fps": 2,
+        "fps": 20,
         "started": true,
         "triangles": 387121,
         "visibleFloors": [
@@ -108,19 +108,19 @@
         "position": [
           3,
           0,
-          6.84
+          6.802
         ],
         "camera": [
           3,
           2.091,
-          10.23
+          10.19
         ],
         "grounded": true,
         "view": "third",
         "yaw": 0,
         "pitch": 0.25,
         "animation": "walk",
-        "fps": 43,
+        "fps": 39,
         "started": true,
         "triangles": 355333,
         "visibleFloors": [
@@ -139,19 +139,19 @@
         "position": [
           3,
           0,
-          6.467
+          6.465
         ],
         "camera": [
           3,
           2.091,
-          9.77
+          9.768
         ],
         "grounded": true,
         "view": "third",
         "yaw": 0,
         "pitch": 0.25,
         "animation": "idle",
-        "fps": 43,
+        "fps": 39,
         "started": true,
         "triangles": 355145,
         "visibleFloors": [
@@ -184,7 +184,7 @@
       "yaw": 0,
       "pitch": 0.25,
       "animation": "idle",
-      "fps": 29,
+      "fps": 38,
       "started": true,
       "triangles": 564889,
       "visibleFloors": [
@@ -199,15 +199,15 @@
     },
     "jump": {
       "floor": 6,
-      "feet": 16.447,
+      "feet": 16.396,
       "position": [
         -1.25,
-        16.447,
+        16.396,
         6.55
       ],
       "camera": [
         -1.25,
-        17.803,
+        17.771,
         6.967
       ],
       "grounded": false,
@@ -215,7 +215,7 @@
       "yaw": 0,
       "pitch": 0.25,
       "animation": "jump",
-      "fps": 22,
+      "fps": 18,
       "started": true,
       "triangles": 564889,
       "visibleFloors": [

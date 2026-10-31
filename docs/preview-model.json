@@ -1,0 +1,388 @@
+{
+  "source": "public\\models\\model.glb",
+  "preview": "public\\models\\model-preview.glb",
+  "sourceBytes": 23956048,
+  "previewBytes": 3662768,
+  "previewSha256": "c35f8b2ea3b31e89cb8b0e9085a651e3bd4788a2bde9ba18c97cdc0f951c33c5",
+  "selection": "Preview GLB loads the scene first; the full ASTC or portable model then upgrades in the background.",
+  "textures": [
+    {
+      "name": "light_marble_normal",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 409581,
+      "previewBytes": 678
+    },
+    {
+      "name": "light_marble_arm",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 399984,
+      "previewBytes": 765
+    },
+    {
+      "name": "light_marble_color",
+      "role": "color",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        256,
+        256
+      ],
+      "bytes": 623495,
+      "previewBytes": 2267
+    },
+    {
+      "name": "black_walnut_normal",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 1897687,
+      "previewBytes": 640
+    },
+    {
+      "name": "black_walnut_arm",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 1458008,
+      "previewBytes": 746
+    },
+    {
+      "name": "black_walnut_color",
+      "role": "color",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        256,
+        256
+      ],
+      "bytes": 945585,
+      "previewBytes": 1480
+    },
+    {
+      "name": "ivory_fabric_normal",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2050
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 3302722,
+      "previewBytes": 623
+    },
+    {
+      "name": "ivory_fabric_arm",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2050
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 2632180,
+      "previewBytes": 625
+    },
+    {
+      "name": "ivory_fabric_color",
+      "role": "color",
+      "sourceSize": [
+        2048,
+        2050
+      ],
+      "previewSize": [
+        256,
+        256
+      ],
+      "bytes": 706172,
+      "previewBytes": 920
+    },
+    {
+      "name": "black_leather_normal",
+      "role": "normal/arm",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 46489,
+      "previewBytes": 620
+    },
+    {
+      "name": "black_leather_arm",
+      "role": "normal/arm",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 173139,
+      "previewBytes": 2441
+    },
+    {
+      "name": "black_leather_color",
+      "role": "color",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "previewSize": [
+        256,
+        256
+      ],
+      "bytes": 68847,
+      "previewBytes": 3230
+    },
+    {
+      "name": "stone_paving_normal",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 3059539,
+      "previewBytes": 978
+    },
+    {
+      "name": "stone_paving_arm",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 1339808,
+      "previewBytes": 1695
+    },
+    {
+      "name": "stone_paving_color",
+      "role": "color",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        256,
+        256
+      ],
+      "bytes": 938809,
+      "previewBytes": 2890
+    },
+    {
+      "name": "white_plaster_normal",
+      "role": "normal/arm",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 33551,
+      "previewBytes": 620
+    },
+    {
+      "name": "white_plaster_arm",
+      "role": "normal/arm",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 17015,
+      "previewBytes": 621
+    },
+    {
+      "name": "white_plaster_color_4k",
+      "role": "color",
+      "sourceSize": [
+        4096,
+        4096
+      ],
+      "previewSize": [
+        256,
+        256
+      ],
+      "bytes": 773818,
+      "previewBytes": 1990
+    },
+    {
+      "name": "ivory_marble_floor_normal",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 92654,
+      "previewBytes": 620
+    },
+    {
+      "name": "ivory_marble_floor_arm",
+      "role": "normal/arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        128,
+        128
+      ],
+      "bytes": 367759,
+      "previewBytes": 1901
+    },
+    {
+      "name": "ivory_marble_medallion",
+      "role": "medallion color",
+      "sourceSize": [
+        1600,
+        1800
+      ],
+      "previewSize": [
+        341,
+        384
+      ],
+      "bytes": 509499,
+      "previewBytes": 14771
+    },
+    {
+      "name": "ivory_marble_floor_color",
+      "role": "color",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "previewSize": [
+        256,
+        256
+      ],
+      "bytes": 275442,
+      "previewBytes": 2756
+    },
+    {
+      "name": "modern-2",
+      "role": "artwork",
+      "sourceSize": [
+        640,
+        800
+      ],
+      "previewSize": [
+        205,
+        256
+      ],
+      "bytes": 50722,
+      "previewBytes": 5193
+    },
+    {
+      "name": "modern-3",
+      "role": "artwork",
+      "sourceSize": [
+        640,
+        800
+      ],
+      "previewSize": [
+        205,
+        256
+      ],
+      "bytes": 71547,
+      "previewBytes": 7345
+    },
+    {
+      "name": "modern-1",
+      "role": "artwork",
+      "sourceSize": [
+        640,
+        800
+      ],
+      "previewSize": [
+        205,
+        256
+      ],
+      "bytes": 73130,
+      "previewBytes": 7489
+    },
+    {
+      "name": "art-1",
+      "role": "artwork",
+      "sourceSize": [
+        512,
+        768
+      ],
+      "previewSize": [
+        171,
+        256
+      ],
+      "bytes": 52976,
+      "previewBytes": 5846
+    },
+    {
+      "name": "art-2",
+      "role": "artwork",
+      "sourceSize": [
+        512,
+        768
+      ],
+      "previewSize": [
+        171,
+        256
+      ],
+      "bytes": 44850,
+      "previewBytes": 5099
+    }
+  ]
+}

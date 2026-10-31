@@ -23,37 +23,59 @@ export async function loadBuilding(loader, base = '/', { modelFile = 'models/mod
   model.name = '3栋51号住宅'
   const floorObjects = new Map()
   const editable = []
-  for (const child of model.children) {
-    const match = child.name.match(/^(?:BATCH|STATIC|EDIT)_F(\d{2})_/)
-    if (match) {
-      const floor = Number(match[1])
-      if (!floorObjects.has(floor)) floorObjects.set(floor, [])
-      floorObjects.get(floor).push(child)
-    }
-    if (/^EDIT_F0[56]_/.test(child.name)) editable.push(child)
-  }
   const materials = new Set()
-  model.traverse((object) => {
-    if (!object.isMesh) return
-    object.receiveShadow = true
-    object.castShadow = !object.material?.transparent
-    for (const material of [].concat(object.material || [])) {
-      materials.add(material)
-      if (/玻璃|Glass/i.test(material.name)) {
-        // Stable, inexpensive architectural glazing. A full scene transmission pass per window
-        // would cost far more than the subtle reflection it adds on a phone.
-        material.transmission = 0
-        material.transparent = true
-        material.opacity = 0.30
-        material.depthWrite = false
-        material.roughness = 0.10
-        material.metalness = 0.12
-      }
-      if (material.map) material.map.anisotropy = 8
-      if (material.normalMap) material.normalMap.anisotropy = 4
-    }
-  })
   let currentFloor = 0
+  function indexModel() {
+    floorObjects.clear(); editable.length = 0; materials.clear()
+    for (const child of model.children) {
+      const match = child.name.match(/^(?:BATCH|STATIC|EDIT)_F(\d{2})_/)
+      if (match) {
+        const floor = Number(match[1])
+        if (!floorObjects.has(floor)) floorObjects.set(floor, [])
+        floorObjects.get(floor).push(child)
+      }
+      if (/^EDIT_F0[56]_/.test(child.name)) editable.push(child)
+    }
+    model.traverse((object) => {
+      if (!object.isMesh) return
+      object.receiveShadow = true
+      object.castShadow = !object.material?.transparent
+      for (const material of [].concat(object.material || [])) {
+        materials.add(material)
+        if (/玻璃|Glass/i.test(material.name)) {
+          // Stable, inexpensive architectural glazing. A full scene transmission pass per window
+          // would cost far more than the subtle reflection it adds on a phone.
+          material.transmission = 0
+          material.transparent = true
+          material.opacity = 0.30
+          material.depthWrite = false
+          material.roughness = 0.10
+          material.metalness = 0.12
+        }
+        if (material.map) material.map.anisotropy = 8
+        if (material.normalMap) material.normalMap.anisotropy = 4
+      }
+    })
+  }
+  indexModel()
+  function replaceModel(nextModel) {
+    const previous = [...model.children]
+    for (const child of previous) model.remove(child)
+    for (const root of previous) {
+      root.traverse((object) => {
+        if (!object.isMesh) return
+        object.geometry?.dispose()
+        for (const material of [].concat(object.material || [])) {
+          for (const key of ['map', 'normalMap', 'roughnessMap', 'metalnessMap', 'aoMap', 'emissiveMap']) material[key]?.dispose()
+          material.dispose()
+        }
+      })
+    }
+    for (const child of [...nextModel.children]) model.add(child)
+    model.name = nextModel.name || model.name
+    indexModel()
+    setFloor(currentFloor)
+  }
   function setFloor(floor) {
     currentFloor = Number(floor) || 0
     for (const [number, objects] of floorObjects) {
@@ -70,7 +92,7 @@ export async function loadBuilding(loader, base = '/', { modelFile = 'models/mod
     collision.object.updateMatrixWorld(true)
     return new Octree().fromGraphNode(collision.object)
   }
-  return { model, collision: collision.object, avatar: avatar.object, animations: avatar.animations || [], editable, materials, setFloor, createOctree, getFloor: () => currentFloor }
+  return { model, collision: collision.object, avatar: avatar.object, animations: avatar.animations || [], editable, materials, setFloor, replaceModel, createOctree, getFloor: () => currentFloor }
 }
 
 export function addBuildingLights(scene) {
