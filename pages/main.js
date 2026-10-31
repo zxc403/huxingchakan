@@ -37,20 +37,32 @@ async function createRenderer(canvas) {
 
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
-// GitHub Pages can throttle a single large request. Range requests let the browser use
-// several connections while preserving one ordinary GLB download on hosts without Range.
-async function loadGltfParallel(gltf, url, onProgress = () => {}) {
-  const isLocalHost = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)
-  if (isLocalHost) return gltf.loadAsync(url, (event) => onProgress(event.loaded, event.total || event.loaded))
+// GitHub Pages throttles a single large request AND gzip-compresses model/gltf-binary
+// on the fly, so Range slices of a .glb can straddle compressed bytes and reassemble
+// into garbage. The identical `.glb.bin` alias is served as application/octet-stream
+// (uncompressed), which keeps Range math exact while still using several connections.
+const GLB_MAGIC = [0x67, 0x6c, 0x54, 0x46] // "glTF"
+
+function looksLikeGlb(buffer) {
+  if (buffer.byteLength < 12) return false
+  const head = new Uint8Array(buffer, 0, 4)
+  return GLB_MAGIC.every((byte, index) => head[index] === byte)
+}
+
+function parseGlb(gltf, buffer) {
+  return new Promise((resolve, reject) => gltf.parse(buffer, '', resolve, reject))
+}
+
+async function loadGlbChunked(gltf, url, onProgress) {
   const probe = await fetch(url, { method: 'HEAD' }).catch(() => null)
   const size = Number(probe?.headers.get('content-length') || 0)
   const hasRange = (probe?.headers.get('accept-ranges') || '').toLowerCase().includes('bytes')
-  if (!probe?.ok || !size || !hasRange) return gltf.loadAsync(url)
+  if (!probe?.ok || !size || !hasRange) throw new Error('Range requests not supported')
 
-  const partSize = 1024 * 1024
+  const partSize = 512 * 1024
   const ranges = Array.from({ length: Math.ceil(size / partSize) }, (_, index) => {
     const start = index * partSize
-    return { index, start, end: Math.min(start + partSize, size) - 1 }
+    return { index, start, end: Math.min(start + partSize, size) - 1, length: Math.min(start + partSize, size) - start }
   })
   const parts = new Array(ranges.length)
   let next = 0, received = 0
@@ -62,8 +74,10 @@ async function loadGltfParallel(gltf, url, onProgress = () => {}) {
         try {
           const response = await fetch(url, { headers: { Range: `bytes=${range.start}-${range.end}` } })
           if (!response.ok || response.status !== 206) throw new Error(`Range request failed: HTTP ${response.status}`)
-          parts[range.index] = await response.arrayBuffer()
-          received += parts[range.index].byteLength
+          const part = await response.arrayBuffer()
+          if (part.byteLength !== range.length) throw new Error(`Range part ${range.index} short: ${part.byteLength} != ${range.length}`)
+          parts[range.index] = part
+          received += part.byteLength
           onProgress(received, size)
           lastError = null
           break
@@ -76,10 +90,33 @@ async function loadGltfParallel(gltf, url, onProgress = () => {}) {
     }
   }
   await Promise.all(Array.from({ length: Math.min(8, ranges.length) }, worker))
-  const output = new Uint8Array(parts.reduce((sum, part) => sum + part.byteLength, 0))
+  const output = new Uint8Array(size)
   let offset = 0
   for (const part of parts) { output.set(new Uint8Array(part), offset); offset += part.byteLength }
-  return new Promise((resolve, reject) => gltf.parse(output.buffer, '', resolve, reject))
+  if (!looksLikeGlb(output.buffer)) throw new Error('Reassembled buffer is not a GLB (compressed range response?)')
+  return parseGlb(gltf, output.buffer)
+}
+
+async function loadGltfParallel(gltf, url, onProgress = () => {}) {
+  const isLocalHost = ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)
+  if (isLocalHost) return gltf.loadAsync(url, (event) => onProgress(event.loaded, event.total || event.loaded))
+  const rangedUrl = url + '.bin'
+  try {
+    return await loadGlbChunked(gltf, rangedUrl, onProgress)
+  } catch (chunkError) {
+    console.warn('分段模型下载失败，改用整包下载', chunkError)
+  }
+  try {
+    const response = await fetch(rangedUrl)
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    const buffer = await response.arrayBuffer()
+    if (!looksLikeGlb(buffer)) throw new Error('下载内容不是有效模型')
+    onProgress(buffer.byteLength, buffer.byteLength)
+    return parseGlb(gltf, buffer)
+  } catch (wholeError) {
+    console.warn('备用模型地址失败，回退原始 GLB', wholeError)
+  }
+  return gltf.loadAsync(url, (event) => onProgress(event.loaded, event.total || event.loaded))
 }
 
 async function main() {
