@@ -1,0 +1,357 @@
+{
+  "server": [
+    "代码编译校验通过；场景注册与编辑数据将在浏览器加载时校验\n",
+    "  ➜  Local:   http://127.0.0.1:5173/\n",
+    "Scene preview: http://127.0.0.1:5173/?kimiScene=1&artifactId=9b27ab20-0b98-44f4-bb03-6f2a2c63382f\n"
+  ],
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.WebGLProgram: Program Info Log: (210,86-138): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(209,39-65): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(210,87-113): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(209,39-65): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(210,87-113): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision"
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "warning",
+      "text": "THREE.WebGLProgram: Program Info Log: (210,86-138): warning X4122: sum of 0.996094 and -2.98545e-017 cannot be represented accurately in double precision\n(209,39-65): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(210,87-113): warning X4122: sum of 1 and -1.49272e-017 cannot be represented accurately in double precision\n(209,39-65): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision\n(210,87-113): warning X4122: sum of 1 and -1.66644e-018 cannot be represented accurately in double precision"
+    }
+  ],
+  "pageErrors": [],
+  "requestFailures": [],
+  "checks": {
+    "initial": {
+      "activeScene": "tour",
+      "materialCount": 59,
+      "badNames": [],
+      "materialNames": [
+        "拉丝黄铜_BrushedBrass",
+        "浅灰大理石_LightMarble",
+        "深灰金属_WindowMetal",
+        "筒灯发光面_Downlight",
+        "结构混凝土_Concrete",
+        "黑胡桃木家具_BlackWalnut",
+        "奶白布艺_IvoryFabric",
+        "水晶玻璃_Crystal",
+        "洁具陶瓷_Ceramic",
+        "浅粉花艺_BlushFlower",
+        "白花艺_WhiteFlower",
+        "种植土_Soil",
+        "绿植浅绿_LeafLight",
+        "绿植深绿_Leaf",
+        "美式护墙板_WarmWhite",
+        "黑色细金属_BlackMetal",
+        "低反玻璃_WindowGlass",
+        "室外石材铺装_StonePaving",
+        "电视屏幕_Television",
+        "白色乳胶漆_WhitePlaster4K",
+        "镜面_Mirror",
+        "3000K暖光灯带_WarmEmission",
+        "F05_Left_FireplaceTV_Flame",
+        "F05_Right_FireplaceTV_Flame",
+        "GTA灰色布艺_GrayFabric",
+        "GTA白色烤漆_WhiteLacquer",
+        "GTA镀铬金属_Chrome",
+        "GTA黑色卷帘_BlackRoller",
+        "GTA黑色烤漆_BlackLacquer",
+        "GTA黑色皮革_BlackLeather",
+        "卧室浅米色_WarmCream",
+        "卷草金花大理石拼花_FloralMarbleInlay",
+        "奶白纱帘_SheerCurtain",
+        "深棕软包床头_Headboard",
+        "灰色石英石_Quartz",
+        "焦糖色搭毯_CaramelThrow",
+        "米白抛光大理石地面_PolishedIvoryMarble",
+        "米色床品_Linen",
+        "外墙暖白石材_Exterior",
+        "灰粉抱枕_DustyRose",
+        "F05_LeftMaster_Art_Print",
+        "F05_LeftNorth_Art_Print",
+        "F05_LeftSouth_Art_Print",
+        "F05_Left_Abstract_Print",
+        "F05_RightMaster_Art_Print",
+        "F05_RightMiddle_Art_Print",
+        "F05_RightNorth_Art_Print",
+        "F05_Right_Abstract_Print",
+        "F06_Left_Art_Artwork0",
+        "F06_Left_Art_Artwork1",
+        "F06_Right_Art_Artwork0",
+        "F06_Right_Art_Artwork1",
+        "屋顶防水_Roof",
+        "草坪_Grass",
+        "Ash wood · Leaves",
+        "Ash wood · Bark",
+        "Grass blades",
+        "Sky backdrop",
+        "Sky pre-pass"
+      ],
+      "fabric": [
+        {
+          "id": "material:entity:building/Mesh%3ABATCH_F01_%E5%A5%B6%E7%99%BD%E5%B8%83%E8%89%BA_IvoryFabric:0/slot:0",
+          "name": "奶白布艺_IvoryFabric",
+          "color": "#ffffff",
+          "bindings": [
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_Arm-1:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_Arm-1",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_Arm1:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_Arm1",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_Back:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_Back",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_BackCushion0:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_BackCushion0",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_BackCushion1:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_BackCushion1",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_BackCushion2:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_BackCushion2",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_Base:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_Base",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_ChaiseBase:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_ChaiseBase",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_ChaiseSeat:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_ChaiseSeat",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_Seat0:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_Seat0",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_Seat1:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_Seat1",
+              "slot": 0
+            },
+            {
+              "id": "entity:f06-left-sofa/Mesh%3AEDIT_F06_LeftSofa_Seat2:0/slot:0",
+              "objectId": "f06-left-sofa",
+              "objectName": "EDIT_F06_LeftSofa_Seat2",
+              "slot": 0
+            }
+          ]
+        }
+      ],
+      "groups": [
+        {
+          "id": "atmosphere",
+          "name": "光照与时段",
+          "objectId": "building",
+          "params": {
+            "hour": {
+              "type": "number",
+              "label": "太阳时段",
+              "min": 6,
+              "max": 22,
+              "step": 0.1,
+              "default": 15.7,
+              "value": 15.7
+            },
+            "interior": {
+              "type": "number",
+              "label": "室内灯光强度",
+              "min": 0,
+              "max": 3,
+              "step": 0.05,
+              "default": 0.85,
+              "value": 0.85
+            }
+          }
+        },
+        {
+          "id": "display",
+          "name": "楼层显示",
+          "objectId": "building",
+          "params": {
+            "displayFloor": {
+              "type": "enum",
+              "label": "室内细节楼层",
+              "options": [
+                {
+                  "label": "全部楼层（巡场）",
+                  "value": "all"
+                },
+                {
+                  "label": "1F",
+                  "value": "1"
+                },
+                {
+                  "label": "2F",
+                  "value": "2"
+                },
+                {
+                  "label": "3F",
+                  "value": "3"
+                },
+                {
+                  "label": "4F",
+                  "value": "4"
+                },
+                {
+                  "label": "5F",
+                  "value": "5"
+                },
+                {
+                  "label": "6F",
+                  "value": "6"
+                }
+              ],
+              "default": "all",
+              "value": "all"
+            }
+          }
+        }
+      ],
+      "floor": 6,
+      "sofaPosition": [
+        0.13727043569087982,
+        15.600000381469727,
+        5.281012535095215
+      ]
+    },
+    "defaults": {
+      "fabricName": "奶白布艺_IvoryFabric",
+      "fabricId": "material:entity:building/Mesh%3ABATCH_F01_%E5%A5%B6%E7%99%BD%E5%B8%83%E8%89%BA_IvoryFabric:0/slot:0",
+      "color": "#ffffff",
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "interior": 0.85
+    },
+    "materialEdit": {
+      "changed": "#c9a27e",
+      "undone": "#ffffff",
+      "redone": "#c9a27e"
+    },
+    "materialCard": {
+      "count": 1,
+      "visible": true
+    },
+    "scaleEdit": {
+      "changed": [
+        1.08,
+        1,
+        1
+      ],
+      "undone": [
+        1,
+        1,
+        1
+      ],
+      "redone": [
+        1.08,
+        1,
+        1
+      ]
+    },
+    "lightParam": {
+      "changed": {
+        "value": 1.05,
+        "applied": 1.05
+      },
+      "undone": 0.85,
+      "redone": 1.05
+    },
+    "save": {
+      "stateExists": true,
+      "bytes": 249373
+    },
+    "restoreChanged": {
+      "color": "#c9a27e",
+      "scale": [
+        1.08,
+        1,
+        1
+      ],
+      "interior": 1.05,
+      "floor": "6"
+    },
+    "restoreDefaults": {
+      "color": "#ffffff",
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "interior": 0.85,
+      "floor": "all"
+    },
+    "play": {
+      "mode": "run",
+      "scene": "walk",
+      "canvas": true,
+      "controls": true,
+      "camera": [
+        0,
+        2.02249989514498,
+        13.567463247762763
+      ],
+      "avatar": true,
+      "afterWalk": [
+        0,
+        2.089198415196366,
+        12.560645091611946
+      ]
+    },
+    "noErrors": true
+  },
+  "defaultsRestoredInFinally": true,
+  "port5173Released": true
+}

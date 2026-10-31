@@ -1,0 +1,435 @@
+{
+  "total": 8692990,
+  "objects": 333,
+  "top": [
+    {
+      "name": "BATCH_F02_GTA灰色布艺_GrayFabric",
+      "triangles": 520438,
+      "vertices": 260525,
+      "polygons": 258705,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_GTA灰色布艺_GrayFabric",
+      "triangles": 520438,
+      "vertices": 260525,
+      "polygons": 258705,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_GTA灰色布艺_GrayFabric",
+      "triangles": 520438,
+      "vertices": 260525,
+      "polygons": 258705,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_GTA灰色布艺_GrayFabric",
+      "triangles": 520438,
+      "vertices": 260525,
+      "polygons": 258705,
+      "modifiers": []
+    },
+    {
+      "name": "EDIT_F05_LeftModernSofa_LowBase",
+      "triangles": 381826,
+      "vertices": 71072,
+      "polygons": 70848,
+      "modifiers": [
+        [
+          "BEVEL",
+          "Soft_Edges"
+        ],
+        [
+          "WEIGHTED_NORMAL",
+          "Weighted_Normals"
+        ]
+      ]
+    },
+    {
+      "name": "BATCH_F02_F05_Left_FireplaceTV_Flame",
+      "triangles": 342174,
+      "vertices": 171153,
+      "polygons": 171087,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_F05_Left_FireplaceTV_Flame",
+      "triangles": 342174,
+      "vertices": 171153,
+      "polygons": 171087,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_F05_Left_FireplaceTV_Flame",
+      "triangles": 342174,
+      "vertices": 171153,
+      "polygons": 171087,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_F05_Left_FireplaceTV_Flame",
+      "triangles": 342174,
+      "vertices": 171153,
+      "polygons": 171087,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_F05_Right_FireplaceTV_Flame",
+      "triangles": 342150,
+      "vertices": 171141,
+      "polygons": 171075,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_F05_Right_FireplaceTV_Flame",
+      "triangles": 342150,
+      "vertices": 171141,
+      "polygons": 171075,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_F05_Right_FireplaceTV_Flame",
+      "triangles": 342150,
+      "vertices": 171141,
+      "polygons": 171075,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_F05_Right_FireplaceTV_Flame",
+      "triangles": 342150,
+      "vertices": 171141,
+      "polygons": 171075,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_GTA黑色烤漆_BlackLacquer",
+      "triangles": 292892,
+      "vertices": 146604,
+      "polygons": 146050,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_电视屏幕_Television",
+      "triangles": 160084,
+      "vertices": 80068,
+      "polygons": 80030,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_电视屏幕_Television",
+      "triangles": 160084,
+      "vertices": 80068,
+      "polygons": 80030,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_电视屏幕_Television",
+      "triangles": 160084,
+      "vertices": 80068,
+      "polygons": 80030,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_电视屏幕_Television",
+      "triangles": 160084,
+      "vertices": 80068,
+      "polygons": 80030,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_GTA黑色皮革_BlackLeather",
+      "triangles": 141696,
+      "vertices": 71072,
+      "polygons": 70848,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_GTA黑色皮革_BlackLeather",
+      "triangles": 141696,
+      "vertices": 71072,
+      "polygons": 70848,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_GTA黑色皮革_BlackLeather",
+      "triangles": 141696,
+      "vertices": 71072,
+      "polygons": 70848,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_镜面_Mirror",
+      "triangles": 137774,
+      "vertices": 68913,
+      "polygons": 68791,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_镜面_Mirror",
+      "triangles": 137774,
+      "vertices": 68913,
+      "polygons": 68791,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_镜面_Mirror",
+      "triangles": 137774,
+      "vertices": 68913,
+      "polygons": 68791,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_镜面_Mirror",
+      "triangles": 137774,
+      "vertices": 68913,
+      "polygons": 68791,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_GTA白色烤漆_WhiteLacquer",
+      "triangles": 112228,
+      "vertices": 56312,
+      "polygons": 56146,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_GTA黑色烤漆_BlackLacquer",
+      "triangles": 104156,
+      "vertices": 52248,
+      "polygons": 52046,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_GTA镀铬金属_Chrome",
+      "triangles": 75948,
+      "vertices": 38082,
+      "polygons": 37986,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_黑胡桃木家具_BlackWalnut",
+      "triangles": 63384,
+      "vertices": 31718,
+      "polygons": 31554,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_黑胡桃木家具_BlackWalnut",
+      "triangles": 63384,
+      "vertices": 31718,
+      "polygons": 31554,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_黑胡桃木家具_BlackWalnut",
+      "triangles": 63384,
+      "vertices": 31718,
+      "polygons": 31554,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_黑胡桃木家具_BlackWalnut",
+      "triangles": 63384,
+      "vertices": 31718,
+      "polygons": 31554,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_GTA黑色皮革_BlackLeather",
+      "triangles": 57744,
+      "vertices": 28896,
+      "polygons": 28872,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_SHELL_深灰金属_WindowMetal",
+      "triangles": 55420,
+      "vertices": 28760,
+      "polygons": 27550,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_GTA白色烤漆_WhiteLacquer",
+      "triangles": 50180,
+      "vertices": 25304,
+      "polygons": 25058,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_浅灰大理石_LightMarble",
+      "triangles": 38964,
+      "vertices": 19560,
+      "polygons": 19482,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_洁具陶瓷_Ceramic",
+      "triangles": 32812,
+      "vertices": 16512,
+      "polygons": 17290,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_洁具陶瓷_Ceramic",
+      "triangles": 32812,
+      "vertices": 16512,
+      "polygons": 17290,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_洁具陶瓷_Ceramic",
+      "triangles": 32812,
+      "vertices": 16512,
+      "polygons": 17290,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_洁具陶瓷_Ceramic",
+      "triangles": 32812,
+      "vertices": 16512,
+      "polygons": 17290,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F06_奶白布艺_IvoryFabric",
+      "triangles": 24472,
+      "vertices": 12416,
+      "polygons": 12148,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_GTA镀铬金属_Chrome",
+      "triangles": 23884,
+      "vertices": 12066,
+      "polygons": 11890,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F06_美式护墙板_WarmWhite",
+      "triangles": 22976,
+      "vertices": 12208,
+      "polygons": 11336,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_GTA黑色烤漆_BlackLacquer",
+      "triangles": 21788,
+      "vertices": 11064,
+      "polygons": 10862,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_低反玻璃_WindowGlass",
+      "triangles": 19620,
+      "vertices": 9832,
+      "polygons": 9794,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_GTA白色烤漆_WhiteLacquer",
+      "triangles": 18980,
+      "vertices": 9704,
+      "polygons": 9458,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F06_拉丝黄铜_BrushedBrass",
+      "triangles": 14196,
+      "vertices": 7346,
+      "polygons": 6638,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_GTA白色烤漆_WhiteLacquer",
+      "triangles": 14180,
+      "vertices": 7304,
+      "polygons": 7058,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_浅灰大理石_LightMarble",
+      "triangles": 12852,
+      "vertices": 6504,
+      "polygons": 6426,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_美式护墙板_WarmWhite",
+      "triangles": 12476,
+      "vertices": 6248,
+      "polygons": 6122,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_美式护墙板_WarmWhite",
+      "triangles": 12476,
+      "vertices": 6248,
+      "polygons": 6122,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_美式护墙板_WarmWhite",
+      "triangles": 12476,
+      "vertices": 6248,
+      "polygons": 6122,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_美式护墙板_WarmWhite",
+      "triangles": 12476,
+      "vertices": 6248,
+      "polygons": 6122,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F06_黑胡桃木家具_BlackWalnut",
+      "triangles": 11552,
+      "vertices": 6048,
+      "polygons": 5056,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F02_黑色细金属_BlackMetal",
+      "triangles": 11324,
+      "vertices": 6200,
+      "polygons": 3638,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F03_黑色细金属_BlackMetal",
+      "triangles": 11324,
+      "vertices": 6200,
+      "polygons": 3638,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F04_黑色细金属_BlackMetal",
+      "triangles": 11324,
+      "vertices": 6200,
+      "polygons": 3638,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F05_黑色细金属_BlackMetal",
+      "triangles": 11324,
+      "vertices": 6200,
+      "polygons": 3638,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_SHELL_浅灰大理石_LightMarble",
+      "triangles": 10728,
+      "vertices": 5648,
+      "polygons": 5364,
+      "modifiers": []
+    },
+    {
+      "name": "BATCH_F06_奶白纱帘_SheerCurtain",
+      "triangles": 9344,
+      "vertices": 4704,
+      "polygons": 4672,
+      "modifiers": []
+    }
+  ]
+}

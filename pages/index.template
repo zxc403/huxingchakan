@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2317271f'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='34' fill='%23e3d2b7'%3E51%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#17271f"><meta name="description" content="3栋51号六层住宅实时漫游，一楼大堂、现代楼层与六楼美式轻奢。">
+  <title>3栋51# 建筑漫游</title>
+  <style>
+    *{box-sizing:border-box}html,body,#app{width:100%;height:100%;margin:0;overflow:hidden;background:#17271f}body{font-family:"Microsoft YaHei",system-ui,sans-serif}#viewport{position:relative;width:100%;height:100%;overflow:hidden}#viewport>canvas{display:block;width:100%;height:100%;outline:0;touch-action:none}#loading{position:absolute;inset:0;z-index:100;display:grid;place-content:center;text-align:center;background:#17271f;color:#e9e2d6;transition:opacity .4s}#loading h1{font:400 28px Georgia,"Microsoft YaHei",serif;letter-spacing:.16em}#loading p{font-size:12px;color:#acbcb0;letter-spacing:.08em}#loading small{display:block;max-width:540px;line-height:1.8;color:#d0a883;padding:15px}.loader{width:160px;height:2px;background:#ffffff18;margin:22px auto;overflow:hidden}.loader:after{content:"";display:block;width:60px;height:2px;background:#c7a779;animation:load 1.4s ease-in-out infinite}@keyframes load{from{transform:translateX(-60px)}to{transform:translateX(170px)}}.render-settings{position:absolute;z-index:21;top:127px;left:27px;color:#eae6dc;font-size:11px;pointer-events:auto;background:#15241e9c;padding:10px 13px;border-left:1px solid #ba9466;width:205px;backdrop-filter:blur(8px)}.render-settings label{display:flex;align-items:center;gap:8px}.render-settings input{width:105px;accent-color:#c6a276}.render-settings small{display:block;color:#aabbb0;margin-top:6px;font-size:9px}@media(max-width:900px),(pointer:coarse){.render-settings{display:none}}@media(prefers-reduced-motion:reduce){.loader:after{animation:none;width:160px}}
+  </style>
+</head>
+<body>
+  <main id="app"><div id="viewport" aria-label="3栋51号实时三维场景"><canvas id="scene" tabindex="0"></canvas></div>
+    <div id="loading"><h1>3栋51# 建筑漫游</h1><div class="loader"></div><p id="loading-text">正在载入六层空间与 PBR 材质…</p></div>
+    <aside class="render-settings"><label>太阳时段 <input id="hour" type="range" min="7" max="20" step="0.1" value="15.7"><span id="hour-value">15:42</span></label><small id="backend-label">检测渲染后端中</small></aside>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

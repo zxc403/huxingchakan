@@ -1,0 +1,63 @@
+{
+  "artifactId": "9b27ab20-0b98-44f4-bb03-6f2a2c63382f",
+  "projectPath": "D:\\KimiData\\kimi\\tasks\\2026-10-25\\15-12-20-6b3b5f75\\building-51",
+  "surface": {
+    "kind": "scene",
+    "presentation": "offscreen-validation",
+    "domScope": "standalone-editor",
+    "desktopControlsInDom": false,
+    "standaloneEditorControlsInDom": true,
+    "persistence": "project-data"
+  },
+  "viewport": { "width": 1440, "height": 900 },
+  "initial": {
+    "title": "3栋51# 建筑漫游",
+    "metaArtifactIdMatches": true,
+    "currentEditorReady": true,
+    "activeSceneId": "tour",
+    "defaultSceneId": "tour",
+    "mode": "edit",
+    "scenes": [
+      { "id": "tour", "name": "建筑巡场" },
+      { "id": "walk", "name": "自由漫游" }
+    ],
+    "materialCount": 59,
+    "unnamedMaterials": 0,
+    "sceneChildren": 8,
+    "meshes": 338,
+    "trianglesIncludingEditorHelpers": 556029
+  },
+  "walkPlay": {
+    "sceneSwitchSucceeded": true,
+    "activeSceneId": "walk",
+    "playSucceeded": true,
+    "projectMode": "run",
+    "editorMode": "run",
+    "hudPresent": true,
+    "hudObserved": [
+      "1F–6F 楼层传送",
+      "第三人称",
+      "操作指南",
+      "全屏",
+      "探索状态与移动速度",
+      "WASD／Shift／空格／V／1–6 操作提示"
+    ],
+    "observedFpsInCapturedFrame": 26,
+    "screenshot": "host-walk-play.png",
+    "screenshotTarget": "canvas",
+    "screenshotBytes": 622604,
+    "screenshotSha256": "248eeaaacca367ec78e51258169298318f481f4f9c65de9f619109b07ce07f8b"
+  },
+  "cleanup": {
+    "stoppedThroughVisibleToolbar": true,
+    "returnedToTourEdit": true,
+    "validationTabClosed": true,
+    "remainingHostTabs": 0
+  },
+  "desktopPreview": {
+    "existingDesktopContainerFound": false,
+    "reloadPerformed": false,
+    "desktopToolbarIpcVerified": false,
+    "note": "本次为隔离的 offscreen SDK 宿主验收，不能据此声明原生桌面工具栏或 IPC 已通过。list_tabs 未发现既有 desktop-container，因此未新建页面冒充同步。"
+  }
+}

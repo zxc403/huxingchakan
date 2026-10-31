@@ -1,0 +1,31 @@
+{
+  "name": "building-51",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "node .edit3d/run.mjs dev",
+    "check": "node .edit3d/run.mjs check",
+    "build": "node .edit3d/run.mjs build",
+    "start": "node dist/server.mjs --data-dir ./data",
+    "pages:dev": "node tools/pages-vite.mjs dev",
+    "pages:build": "node tools/pages-vite.mjs build",
+    "pages:preview": "vite preview --config pages/vite.config.js"
+  },
+  "dependencies": {
+    "three": "0.186.0",
+    "@edit3d/sdk": "file:./.edit3d/edit3d-sdk.tgz"
+  },
+  "devDependencies": {
+    "@edit3d/cli": "file:./.edit3d/edit3d-cli.tgz"
+  },
+  "edit3d": {
+    "template": "game",
+    "entry": "src/project.js",
+    "sceneProtocol": 1,
+    "artifactId": "9b27ab20-0b98-44f4-bb03-6f2a2c63382f"
+  }
+}

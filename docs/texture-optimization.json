@@ -1,0 +1,382 @@
+{
+  "source": "public\\models\\model.uncompressed.glb",
+  "portable": "public\\models\\model.glb",
+  "astc": "public\\models\\model-astc.glb",
+  "sourceBytes": 23956048,
+  "portableBytes": 23956048,
+  "astcBytes": 22416308,
+  "astcSha256": "5aaa3ec970b0dfd62165329c71e13122edf4ff273480c2ebfcead1b276dcf17b",
+  "selection": "ASTC 4x4 only when supported; otherwise portable JPEG/PNG textures",
+  "textures": [
+    {
+      "name": "light_marble_normal",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "light_marble_arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "light_marble_color",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        1024,
+        1024
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "sRGB",
+      "vkFormat": 158,
+      "bytes": 1398672
+    },
+    {
+      "name": "black_walnut_normal",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "black_walnut_arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "black_walnut_color",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        1024,
+        1024
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "sRGB",
+      "vkFormat": 158,
+      "bytes": 1398672
+    },
+    {
+      "name": "ivory_fabric_normal",
+      "sourceSize": [
+        2048,
+        2050
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "ivory_fabric_arm",
+      "sourceSize": [
+        2048,
+        2050
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "ivory_fabric_color",
+      "sourceSize": [
+        2048,
+        2050
+      ],
+      "runtimeSize": [
+        1023,
+        1024
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "sRGB",
+      "vkFormat": 158,
+      "bytes": 1398672
+    },
+    {
+      "name": "black_leather_normal",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "black_leather_arm",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "black_leather_color",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "runtimeSize": [
+        1024,
+        1024
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "sRGB",
+      "vkFormat": 158,
+      "bytes": 1398672
+    },
+    {
+      "name": "stone_paving_normal",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "stone_paving_arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "stone_paving_color",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        1024,
+        1024
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "sRGB",
+      "vkFormat": 158,
+      "bytes": 1398672
+    },
+    {
+      "name": "white_plaster_normal",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "white_plaster_arm",
+      "sourceSize": [
+        1024,
+        1024
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "white_plaster_color_4k",
+      "sourceSize": [
+        4096,
+        4096
+      ],
+      "runtimeSize": [
+        1024,
+        1024
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "sRGB",
+      "vkFormat": 158,
+      "bytes": 1398672
+    },
+    {
+      "name": "ivory_marble_floor_normal",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "ivory_marble_floor_arm",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        512,
+        512
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "linear",
+      "vkFormat": 157,
+      "bytes": 350064
+    },
+    {
+      "name": "ivory_marble_medallion",
+      "sourceSize": [
+        1600,
+        1800
+      ],
+      "runtimeSize": [
+        1600,
+        1800
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "sRGB",
+      "vkFormat": 158,
+      "bytes": 3842128
+    },
+    {
+      "name": "ivory_marble_floor_color",
+      "sourceSize": [
+        2048,
+        2048
+      ],
+      "runtimeSize": [
+        1024,
+        1024
+      ],
+      "encoding": "ASTC 4x4 + mipmaps",
+      "transfer": "sRGB",
+      "vkFormat": 158,
+      "bytes": 1398672
+    },
+    {
+      "name": "modern-2",
+      "sourceSize": [
+        640,
+        800
+      ],
+      "encoding": "JPEG retained"
+    },
+    {
+      "name": "modern-3",
+      "sourceSize": [
+        640,
+        800
+      ],
+      "encoding": "JPEG retained"
+    },
+    {
+      "name": "modern-1",
+      "sourceSize": [
+        640,
+        800
+      ],
+      "encoding": "JPEG retained"
+    },
+    {
+      "name": "art-1",
+      "sourceSize": [
+        512,
+        768
+      ],
+      "encoding": "JPEG retained"
+    },
+    {
+      "name": "art-2",
+      "sourceSize": [
+        512,
+        768
+      ],
+      "encoding": "JPEG retained"
+    }
+  ]
+}

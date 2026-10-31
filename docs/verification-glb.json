@@ -1,0 +1,63 @@
+{
+  "model": {
+    "file_bytes": 23956048,
+    "objects": 339,
+    "mesh_objects": 331,
+    "triangles": 478352,
+    "materials": 54,
+    "images": 27,
+    "extensions_used": [
+      "KHR_draco_mesh_compression",
+      "KHR_materials_clearcoat",
+      "KHR_materials_transmission",
+      "KHR_materials_emissive_strength",
+      "KHR_materials_ior",
+      "KHR_materials_sheen"
+    ],
+    "extensions_required": [
+      "KHR_draco_mesh_compression"
+    ],
+    "bones": 0,
+    "actions": [],
+    "animations": [],
+    "unresolved_external_images": []
+  },
+  "collision": {
+    "file_bytes": 1447344,
+    "objects": 1078,
+    "mesh_objects": 1078,
+    "triangles": 12936,
+    "materials": 0,
+    "images": 0,
+    "extensions_used": [],
+    "extensions_required": [],
+    "bones": 0,
+    "actions": [],
+    "animations": [],
+    "unresolved_external_images": []
+  },
+  "character": {
+    "file_bytes": 306968,
+    "objects": 3,
+    "mesh_objects": 2,
+    "triangles": 5236,
+    "materials": 5,
+    "images": 0,
+    "extensions_used": [],
+    "extensions_required": [],
+    "bones": 22,
+    "actions": [
+      "idle",
+      "jump",
+      "run",
+      "walk"
+    ],
+    "animations": [
+      "idle",
+      "jump",
+      "run",
+      "walk"
+    ],
+    "unresolved_external_images": []
+  }
+}

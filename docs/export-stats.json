@@ -1,0 +1,12 @@
+{
+  "objects_after_batch": 339,
+  "building_triangles": 478352,
+  "collision_triangles": 12936,
+  "avatar_triangles": 5156,
+  "seconds": 221.85,
+  "files": {
+    "character.glb": 306968,
+    "collision.glb": 1447344,
+    "model.glb": 23956048
+  }
+}

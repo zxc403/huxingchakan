@@ -1,0 +1,70 @@
+{
+  "outer_shell_dimensions_m": [
+    17.2,
+    14.9,
+    18.67
+  ],
+  "outer_min": [
+    -8.600000381469727,
+    -7.449999809265137,
+    -0.07000000029802322
+  ],
+  "outer_max": [
+    8.600000381469727,
+    7.450000286102295,
+    18.600000381469727
+  ],
+  "themes": {
+    "F01": {
+      "leather": 0,
+      "ivory_fabric": 22,
+      "medallion": 0,
+      "structural_slabs": 4,
+      "objects": 199
+    },
+    "F02": {
+      "leather": 38,
+      "ivory_fabric": 0,
+      "medallion": 0,
+      "structural_slabs": 4,
+      "objects": 816
+    },
+    "F03": {
+      "leather": 38,
+      "ivory_fabric": 0,
+      "medallion": 0,
+      "structural_slabs": 4,
+      "objects": 816
+    },
+    "F04": {
+      "leather": 38,
+      "ivory_fabric": 0,
+      "medallion": 0,
+      "structural_slabs": 4,
+      "objects": 816
+    },
+    "F05": {
+      "leather": 38,
+      "ivory_fabric": 0,
+      "medallion": 0,
+      "structural_slabs": 4,
+      "objects": 816
+    },
+    "F06": {
+      "leather": 0,
+      "ivory_fabric": 124,
+      "medallion": 2,
+      "structural_slabs": 4,
+      "objects": 1583
+    }
+  },
+  "avatar_bones": 22,
+  "avatar_triangles": 5156,
+  "actions": [
+    "idle",
+    "jump",
+    "run",
+    "walk"
+  ],
+  "material_count": 59
+}

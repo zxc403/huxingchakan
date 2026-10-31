@@ -1,0 +1,122 @@
+[
+  {
+    "id": "wood_floor",
+    "map": "color",
+    "file": "public/textures/source/wood_floor_color_2k.jpg",
+    "bytes": 2983667,
+    "md5": "d209b7416b022ed06093aef068c7fe23",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor/wood_floor_diff_2k.jpg"
+  },
+  {
+    "id": "wood_floor",
+    "map": "normal",
+    "file": "public/textures/source/wood_floor_normal_2k.jpg",
+    "bytes": 1863576,
+    "md5": "e1d8a588c1fc3d62cc60da1e4cd1a689",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor/wood_floor_nor_gl_2k.jpg"
+  },
+  {
+    "id": "wood_floor",
+    "map": "arm",
+    "file": "public/textures/source/wood_floor_arm_2k.jpg",
+    "bytes": 1928292,
+    "md5": "d559596b2779c4cc64bb62aed3a3111e",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/wood_floor/wood_floor_arm_2k.jpg"
+  },
+  {
+    "id": "black_walnut_veneer_01",
+    "map": "color",
+    "file": "public/textures/source/black_walnut_veneer_01_color_2k.jpg",
+    "bytes": 2487539,
+    "md5": "4dac45ab24bc39c75cf94dd640da816c",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/black_walnut_veneer_01/black_walnut_veneer_01_diff_2k.jpg"
+  },
+  {
+    "id": "black_walnut_veneer_01",
+    "map": "normal",
+    "file": "public/textures/source/black_walnut_veneer_01_normal_2k.jpg",
+    "bytes": 1897687,
+    "md5": "a1f0b0e1e0988cf2ebc9b62b7a9c3603",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/black_walnut_veneer_01/black_walnut_veneer_01_nor_gl_2k.jpg"
+  },
+  {
+    "id": "black_walnut_veneer_01",
+    "map": "arm",
+    "file": "public/textures/source/black_walnut_veneer_01_arm_2k.jpg",
+    "bytes": 3431399,
+    "md5": "4ebfab4fb0933124b2b1b6024ec0b7ff",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/black_walnut_veneer_01/black_walnut_veneer_01_arm_2k.jpg"
+  },
+  {
+    "id": "marble_01",
+    "map": "color",
+    "file": "public/textures/source/marble_01_color_2k.jpg",
+    "bytes": 1269188,
+    "md5": "4eeefea16242cecb3b429ac0c8f88740",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_diff_2k.jpg"
+  },
+  {
+    "id": "marble_01",
+    "map": "normal",
+    "file": "public/textures/source/marble_01_normal_2k.jpg",
+    "bytes": 409581,
+    "md5": "f25efb0b61ec7ac183b3b0f4d032ed17",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_nor_gl_2k.jpg"
+  },
+  {
+    "id": "marble_01",
+    "map": "arm",
+    "file": "public/textures/source/marble_01_arm_2k.jpg",
+    "bytes": 214100,
+    "md5": "63305599b8b82c5769c0ac2a4a951ba6",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/marble_01/marble_01_arm_2k.jpg"
+  },
+  {
+    "id": "cotton_jersey",
+    "map": "color",
+    "file": "public/textures/source/cotton_jersey_color_2k.jpg",
+    "bytes": 3009673,
+    "md5": "911fa5b8031c69d7051489f813b170ac",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cotton_jersey/cotton_jersey_diff_2k.jpg"
+  },
+  {
+    "id": "cotton_jersey",
+    "map": "normal",
+    "file": "public/textures/source/cotton_jersey_normal_2k.jpg",
+    "bytes": 3302722,
+    "md5": "6252598a3fdc5d229ed9aa50e77be587",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cotton_jersey/cotton_jersey_nor_gl_2k.jpg"
+  },
+  {
+    "id": "cotton_jersey",
+    "map": "arm",
+    "file": "public/textures/source/cotton_jersey_arm_2k.jpg",
+    "bytes": 4615270,
+    "md5": "77cfbbe30d92f90b8c2cc22bd2510baf",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/cotton_jersey/cotton_jersey_arm_2k.jpg"
+  },
+  {
+    "id": "rectangular_paving",
+    "map": "color",
+    "file": "public/textures/source/rectangular_paving_color_2k.jpg",
+    "bytes": 2899518,
+    "md5": "7409956ecdd142ba125916b9c59c6f5e",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rectangular_paving/rectangular_paving_diff_2k.jpg"
+  },
+  {
+    "id": "rectangular_paving",
+    "map": "normal",
+    "file": "public/textures/source/rectangular_paving_normal_2k.jpg",
+    "bytes": 3059539,
+    "md5": "1e9df449df11d00eaac8400bdcfd6be5",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rectangular_paving/rectangular_paving_nor_gl_2k.jpg"
+  },
+  {
+    "id": "rectangular_paving",
+    "map": "arm",
+    "file": "public/textures/source/rectangular_paving_arm_2k.jpg",
+    "bytes": 3008463,
+    "md5": "b7dcab44730f0f87d38a35e5eb181756",
+    "source": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rectangular_paving/rectangular_paving_arm_2k.jpg"
+  }
+]

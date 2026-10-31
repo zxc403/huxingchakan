@@ -1,0 +1,24 @@
+node_modules/
+dist/
+pages/dist/
+# 仅在独立漫游开发/构建期间由 tools/pages-vite.mjs 临时生成。
+pages/index.html
+
+*.log
+*.blend1
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+
+# 本地模型备份与纹理工具，不是运行或复现所需的源文件。
+public/models/model.uncompressed.glb
+tools/7zip-full.exe
+tools/7zip-full/
+tools/7zip-bin-5.2.0.tgz
+tools/ktx-installer.exe
+tools/ktx/
+tools/package/
+tools/texture-work/
+tools/ktx-release.json
+tools/toktx-help.txt

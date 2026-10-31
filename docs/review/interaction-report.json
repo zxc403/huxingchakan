@@ -1,0 +1,592 @@
+{
+  "checks": {
+    "scene-ready": {
+      "pass": true,
+      "details": []
+    },
+    "floor-teleport-1-to-6": {
+      "pass": true,
+      "details": [
+        {
+          "floor": 1,
+          "feet": -0.063,
+          "fps": 15,
+          "calls": 111
+        },
+        {
+          "floor": 2,
+          "feet": 3.6,
+          "fps": 29,
+          "calls": 127
+        },
+        {
+          "floor": 3,
+          "feet": 6.6,
+          "fps": 21,
+          "calls": 129
+        },
+        {
+          "floor": 4,
+          "feet": 9.6,
+          "fps": 16,
+          "calls": 129
+        },
+        {
+          "floor": 5,
+          "feet": 12.6,
+          "fps": 20,
+          "calls": 206
+        },
+        {
+          "floor": 6,
+          "feet": 15.6,
+          "fps": 20,
+          "calls": 234
+        }
+      ]
+    },
+    "keyboard-walk": {
+      "pass": true,
+      "details": {
+        "beforeWalk": {
+          "floor": 1,
+          "feet": 0,
+          "position": [
+            3,
+            0,
+            9
+          ],
+          "camera": [
+            3,
+            2.091,
+            12.294
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 19,
+          "started": true,
+          "triangles": 346025,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 107,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        },
+        "duringWalk": {
+          "floor": 1,
+          "feet": 0,
+          "position": [
+            3,
+            0,
+            7.831
+          ],
+          "camera": [
+            3,
+            2.091,
+            11.22
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "walk",
+          "fps": 31,
+          "started": true,
+          "triangles": 345849,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 106,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        },
+        "afterWalk": {
+          "floor": 1,
+          "feet": 0,
+          "position": [
+            3,
+            0,
+            6.234
+          ],
+          "camera": [
+            3,
+            2.091,
+            9.537
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 34,
+          "started": true,
+          "triangles": 345473,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 104,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        }
+      }
+    },
+    "keyboard-run": {
+      "pass": true,
+      "details": {
+        "floor": 1,
+        "feet": 0,
+        "position": [
+          3,
+          0,
+          3.147
+        ],
+        "camera": [
+          3,
+          2.091,
+          6.649
+        ],
+        "grounded": true,
+        "view": "third",
+        "yaw": 0,
+        "pitch": 0.25,
+        "animation": "run",
+        "fps": 34,
+        "started": true,
+        "triangles": 320697,
+        "visibleFloors": [
+          1
+        ],
+        "backend": "WebGPU",
+        "calls": 99,
+        "dpr": 1,
+        "modelFile": "models/model.glb",
+        "textureMode": "portable",
+        "meshes": 161
+      }
+    },
+    "jump-and-land": {
+      "pass": true,
+      "details": {
+        "duringJump": {
+          "floor": 1,
+          "feet": 0.791,
+          "position": [
+            3,
+            0.791,
+            2.641
+          ],
+          "camera": [
+            3,
+            2.807,
+            5.937
+          ],
+          "grounded": false,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "jump",
+          "fps": 33,
+          "started": true,
+          "triangles": 320697,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 99,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        },
+        "afterJump": {
+          "floor": 1,
+          "feet": 0,
+          "position": [
+            3,
+            0,
+            2.638
+          ],
+          "camera": [
+            3,
+            2.091,
+            5.932
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 34,
+          "started": true,
+          "triangles": 320697,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 99,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        }
+      }
+    },
+    "first-third-person": {
+      "pass": true,
+      "details": {
+        "first": "first",
+        "third": "third"
+      }
+    },
+    "interior-wall-collision": {
+      "pass": true,
+      "details": {
+        "floor": 5,
+        "feet": 12.6,
+        "position": [
+          -2.781,
+          12.6,
+          4.863
+        ],
+        "camera": [
+          0.513,
+          14.691,
+          4.863
+        ],
+        "grounded": true,
+        "view": "third",
+        "yaw": 1.571,
+        "pitch": 0.25,
+        "animation": "idle",
+        "fps": 20,
+        "started": true,
+        "triangles": 449241,
+        "visibleFloors": [
+          5
+        ],
+        "backend": "WebGPU",
+        "calls": 195,
+        "dpr": 1,
+        "modelFile": "models/model.glb",
+        "textureMode": "portable",
+        "meshes": 177
+      }
+    },
+    "open-door-traversal": {
+      "pass": true,
+      "details": {
+        "floor": 5,
+        "feet": 12.6,
+        "position": [
+          0.519,
+          12.6,
+          -1.82
+        ],
+        "camera": [
+          -2.783,
+          14.691,
+          -1.82
+        ],
+        "grounded": true,
+        "view": "third",
+        "yaw": -1.571,
+        "pitch": 0.25,
+        "animation": "idle",
+        "fps": 22,
+        "started": true,
+        "triangles": 446629,
+        "visibleFloors": [
+          5
+        ],
+        "backend": "WebGPU",
+        "calls": 196,
+        "dpr": 1,
+        "modelFile": "models/model.glb",
+        "textureMode": "portable",
+        "meshes": 177
+      }
+    },
+    "lower-stair-flight": {
+      "pass": true,
+      "details": {
+        "mid": {
+          "floor": 1,
+          "feet": 1.779,
+          "position": [
+            -1.096,
+            1.779,
+            -5.462
+          ],
+          "camera": [
+            -1.096,
+            3.598,
+            -3.217
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 29,
+          "started": true,
+          "triangles": 278681,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 92,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        },
+        "upperStart": {
+          "floor": 1,
+          "feet": 1.8,
+          "position": [
+            0.283,
+            1.8,
+            -5.66
+          ],
+          "camera": [
+            0.273,
+            3.891,
+            -2.366
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 28,
+          "started": true,
+          "triangles": 298681,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 94,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        }
+      }
+    },
+    "full-stair-traversal": {
+      "pass": true,
+      "details": {
+        "mid": {
+          "floor": 1,
+          "feet": 1.779,
+          "position": [
+            -1.096,
+            1.779,
+            -5.462
+          ],
+          "camera": [
+            -1.096,
+            3.598,
+            -3.217
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 29,
+          "started": true,
+          "triangles": 278681,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 92,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        },
+        "upperStart": {
+          "floor": 1,
+          "feet": 1.8,
+          "position": [
+            0.283,
+            1.8,
+            -5.66
+          ],
+          "camera": [
+            0.273,
+            3.891,
+            -2.366
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 0,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 28,
+          "started": true,
+          "triangles": 298681,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 94,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        },
+        "turned": {
+          "floor": 1,
+          "feet": 1.8,
+          "position": [
+            0.29,
+            1.8,
+            -5.66
+          ],
+          "camera": [
+            0.327,
+            3.402,
+            -7.036
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 3.115,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 31,
+          "started": true,
+          "triangles": 347121,
+          "visibleFloors": [
+            1
+          ],
+          "backend": "WebGPU",
+          "calls": 111,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 161
+        },
+        "top": {
+          "floor": 2,
+          "feet": 3.6,
+          "position": [
+            0.167,
+            3.6,
+            -2.703
+          ],
+          "camera": [
+            0.222,
+            5.375,
+            -4.759
+          ],
+          "grounded": true,
+          "view": "third",
+          "yaw": 3.115,
+          "pitch": 0.25,
+          "animation": "idle",
+          "fps": 28,
+          "started": true,
+          "triangles": 416261,
+          "visibleFloors": [
+            2
+          ],
+          "backend": "WebGPU",
+          "calls": 136,
+          "dpr": 1,
+          "modelFile": "models/model.glb",
+          "textureMode": "portable",
+          "meshes": 177
+        }
+      }
+    },
+    "no-runtime-errors": {
+      "pass": true,
+      "details": {
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": [],
+        "consoleErrors": []
+      }
+    }
+  },
+  "console": [
+    {
+      "type": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "warning",
+      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
+    },
+    {
+      "type": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "warning",
+      "text": "The powerPreference option is currently ignored when calling requestAdapter() on Windows. See https://crbug.com/369219127"
+    }
+  ],
+  "pageErrors": [],
+  "requestFailures": [],
+  "badResponses": [],
+  "capabilities": {
+    "backend": "WebGPU",
+    "modelFile": "models/model.glb",
+    "gpu": "ANGLE (Intel, Intel(R) Iris(R) Xe Graphics (0x00009A49) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "adapterInfo": {
+      "vendor": "intel",
+      "architecture": "gen-12lp",
+      "device": "",
+      "description": ""
+    }
+  },
+  "finalState": {
+    "floor": 2,
+    "feet": 3.6,
+    "position": [
+      0.167,
+      3.6,
+      -2.703
+    ],
+    "camera": [
+      0.222,
+      5.375,
+      -4.759
+    ],
+    "grounded": true,
+    "view": "third",
+    "yaw": 3.115,
+    "pitch": 0.25,
+    "animation": "idle",
+    "fps": 29,
+    "started": true,
+    "triangles": 416261,
+    "visibleFloors": [
+      2
+    ],
+    "backend": "WebGPU",
+    "calls": 136,
+    "dpr": 1,
+    "modelFile": "models/model.glb",
+    "textureMode": "portable",
+    "meshes": 177
+  },
+  "errorFree": true
+}
