@@ -58,8 +58,10 @@ function parseGlb(gltf, buffer) {
 async function fetchPart(url, expectedBytes) {
   let lastError = null
   for (let attempt = 0; attempt < 3; attempt++) {
+    const controller = new AbortController()
+    const timer = setTimeout(() => controller.abort(), 45000)
     try {
-      const response = await fetch(url)
+      const response = await fetch(url, { signal: controller.signal })
       if (!response.ok) throw new Error(`HTTP ${response.status}`)
       const buffer = await response.arrayBuffer()
       if (buffer.byteLength !== expectedBytes) throw new Error(`Part size mismatch: ${buffer.byteLength} != ${expectedBytes}`)
@@ -67,13 +69,15 @@ async function fetchPart(url, expectedBytes) {
     } catch (error) {
       lastError = error
       if (attempt < 2) await delay(300 * (attempt + 1))
+    } finally {
+      clearTimeout(timer)
     }
   }
   throw lastError
 }
 
 async function loadGlbInParts(gltf, url, onProgress) {
-  const response = await fetch(`${url}.parts.json`)
+  const response = await fetch(`${url}.parts.json`, { signal: AbortSignal.timeout(45000) })
   if (!response.ok) throw new Error(`Parts manifest missing: HTTP ${response.status}`)
   const manifest = await response.json()
   const buffers = new Array(manifest.parts.length)
