@@ -1,0 +1,13 @@
+{
+  "model": "models/collision.glb",
+  "bytes": 1447344,
+  "sha256": "21b078d05491eb25965e0f861478da9881959f403aefacc21bb5132bcba7862f",
+  "parts": [
+    "models/collision.glb.part-00",
+    "models/collision.glb.part-01"
+  ],
+  "partBytes": [
+    723672,
+    723672
+  ]
+}

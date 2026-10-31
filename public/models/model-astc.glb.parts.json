@@ -1,0 +1,25 @@
+{
+  "model": "models/model-astc.glb",
+  "bytes": 22416308,
+  "sha256": "5aaa3ec970b0dfd62165329c71e13122edf4ff273480c2ebfcead1b276dcf17b",
+  "parts": [
+    "models/model-astc.glb.part-00",
+    "models/model-astc.glb.part-01",
+    "models/model-astc.glb.part-02",
+    "models/model-astc.glb.part-03",
+    "models/model-astc.glb.part-04",
+    "models/model-astc.glb.part-05",
+    "models/model-astc.glb.part-06",
+    "models/model-astc.glb.part-07"
+  ],
+  "partBytes": [
+    2802039,
+    2802039,
+    2802039,
+    2802039,
+    2802038,
+    2802038,
+    2802038,
+    2802038
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "model": "models/character.glb",
+  "bytes": 306968,
+  "sha256": "f7e5dbd968b059d4d6d96fd46569220f5c57aec3647cad9d768da3c5b518e9eb",
+  "parts": [
+    "models/character.glb.part-00"
+  ],
+  "partBytes": [
+    306968
+  ]
+}

@@ -81,7 +81,7 @@ npm start
 
 GitHub Pages 大文件单连接吞吐不稳定，因此独立漫游会先加载 `model-preview.glb`（3,662,768 字节，颜色最多 256、法线／ARM 128、拼花 384；SHA-256 为 `c35f8b2ea3b31e89cb8b0e9085a651e3bd4788a2bde9ba18c97cdc0f951c33c5`）进入场景，再并行分段下载完整 ASTC／标准模型并原位升级。详细尺寸记录见 `docs/preview-model.json`。
 
-GitHub Pages 还会对 `model/gltf-binary` 即时 gzip 压缩，`Range` 切片会落在压缩流上导致拼包损坏；因此线上分段下载改走同名 `.glb.bin` 副本（按 `application/octet-stream` 原样传输，内容逐字节一致），并在拼包后校验 `glTF` 魔数，失败时自动回退整包下载或原始 GLB。本地 `localhost` 仍直接加载原始 GLB。
+GitHub Pages 还会对 `model/gltf-binary` 即时 gzip 压缩，`Range` 切片会落在压缩流上导致拼包损坏；因此线上改用构建期拆好的 `.part-NN` 分段文件并行下载（每个分段是普通静态资源，浏览器会透明处理 gzip），拼包后校验 `glTF` 魔数与字节数，失败时自动回退单连接加载原始 GLB。分段由 `tools/make_model_parts.py` 生成并逐字节校验重组一致。本地 `localhost` 仍直接加载原始 GLB。
 
 ## 验收状态
 

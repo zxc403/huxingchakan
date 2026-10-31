@@ -1,0 +1,17 @@
+{
+  "model": "models/model-preview.glb",
+  "bytes": 3662768,
+  "sha256": "c35f8b2ea3b31e89cb8b0e9085a651e3bd4788a2bde9ba18c97cdc0f951c33c5",
+  "parts": [
+    "models/model-preview.glb.part-00",
+    "models/model-preview.glb.part-01",
+    "models/model-preview.glb.part-02",
+    "models/model-preview.glb.part-03"
+  ],
+  "partBytes": [
+    915692,
+    915692,
+    915692,
+    915692
+  ]
+}

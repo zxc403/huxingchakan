@@ -15,7 +15,6 @@ from optimize_glb import chunks, write_glb
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'public/models/model.glb'
 OUT = ROOT / 'public/models/model-preview.glb'
-OUT_BIN = ROOT / 'public/models/model-preview.glb.bin'
 MANIFEST = ROOT / 'docs/preview-model.json'
 
 
@@ -80,9 +79,10 @@ def main() -> None:
 
     document['buffers'][0]['byteLength'] = len(output_binary)
     write_glb(OUT, document, bytes(output_binary))
-    # GitHub Pages gzip-compresses model/gltf-binary on the fly, which breaks
-    # byte-range reassembly; the .bin alias is served uncompressed for ranged loads.
-    OUT_BIN.write_bytes(OUT.read_bytes())
+    # Online loads fetch the model through the offline-split .part-NN files; make
+    # sure those stay in sync with the regenerated preview.
+    import make_model_parts
+    make_model_parts.split_model('model-preview.glb', make_model_parts.PLAN['model-preview.glb'])
 
     check, check_binary = chunks(OUT)
     assert check['buffers'][0]['byteLength'] == len(check_binary)
@@ -96,7 +96,6 @@ def main() -> None:
         'sourceBytes': SOURCE.stat().st_size,
         'previewBytes': OUT.stat().st_size,
         'previewSha256': hashlib.sha256(OUT.read_bytes()).hexdigest(),
-        'previewBin': str(OUT_BIN.relative_to(ROOT)),
         'selection': 'Preview GLB loads the scene first; the full ASTC or portable model then upgrades in the background.',
         'textures': report,
     }
